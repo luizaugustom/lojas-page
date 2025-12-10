@@ -28,12 +28,12 @@ export default function Features() {
     {
       icon: Globe,
       title: '🌐 Catálogo Digital Público',
-      description: 'Transforme sua loja em uma vitrine online! Crie um catálogo digital público personalizado para seus clientes navegarem produtos, preços e estoques (PRO). Link único, busca e filtros avançados.',
+      description: 'Transforme sua loja em uma vitrine online! Crie um catálogo digital público personalizado para seus clientes navegarem produtos, preços e estoques. Link único, busca e filtros avançados.',
     },
     {
       icon: MessageCircle,
       title: '💬 Mensagens Automáticas de Cobrança',
-      description: 'Sistema inteligente que envia mensagens WhatsApp automáticas quando vendas a prazo vencem (Plus/Pro). Configure mensagens personalizadas e aumente seu índice de recebimento.',
+      description: 'Sistema inteligente que envia mensagens WhatsApp automáticas quando vendas a prazo vencem. Configure mensagens personalizadas e aumente seu índice de recebimento.',
     },
     {
       icon: Settings,

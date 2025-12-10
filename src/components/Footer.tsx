@@ -3,6 +3,9 @@
 import { Phone, MapPin, Instagram, Youtube, MessageCircle } from 'lucide-react'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { Tangerine } from 'next/font/google'
+
+const tangerine = Tangerine({ weight: '700', subsets: ['latin'] })
 
 const frasesBiblicas = [
     "Tudo posso naquele que me fortalece. - Filipenses 4:13",
@@ -118,8 +121,15 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer id="contato" className="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <footer id="contato" className="bg-gray-900 text-gray-300 pt-4 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Divine Message */}
+        <div className="text-center mb-4 pb-4 border-b border-gray-800">
+          <p className={`${tangerine.className} text-4xl sm:text-5xl text-yellow-500 drop-shadow-lg`}>
+            Deus é Fiel
+          </p>
+        </div>
+
         {/* Main Footer Content */}
         <div className="flex flex-col sm:flex-row justify-between gap-8 sm:gap-12 mb-8 sm:mb-12">
           {/* Company Info */}

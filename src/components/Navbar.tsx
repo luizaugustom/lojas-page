@@ -116,7 +116,7 @@ export default function Navbar() {
               className="flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors border-2 border-primary-600 px-4 py-2 rounded-full hover:bg-primary-50"
             >
               <PlayCircle size={18} />
-              <span>Curso Gratuito</span>
+              <span>Veja o sistema</span>
             </a>
             <a
               href={`https://wa.me/5548998482590?text=${encodeURIComponent('Olá! Tenho interesse no Sistema Montshop e gostaria de começar o teste gratuito de 7 dias.')}`}
@@ -167,7 +167,7 @@ export default function Navbar() {
               className="flex items-center gap-2 px-4 py-3 mx-4 mt-2 text-primary-600 hover:bg-primary-50 rounded-lg font-medium transition-colors border border-primary-200"
             >
               <PlayCircle size={18} />
-              <span>Curso Gratuito</span>
+              <span>Veja o Sistema</span>
             </a>
             <a
               href={`https://wa.me/5548998482590?text=${encodeURIComponent('Olá! Tenho interesse no Sistema Montshop e gostaria de começar o teste gratuito de 7 dias.')}`}

@@ -62,7 +62,7 @@ export default function CTA() {
               className="group bg-white/10 backdrop-blur-sm text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg border-2 border-white hover:bg-white/20 transform hover:scale-105 transition-all flex items-center justify-center gap-2"
             >
               <PlayCircle className="w-4 h-4 sm:w-5 sm:h-5" />
-              Ver Curso Gratuito
+              Ver o Sistema Completo
             </a>
             <a
               href="#contato"
