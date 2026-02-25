@@ -9,7 +9,7 @@ export async function GET() {
   try {
     // Buscar releases do GitHub
     const releaseResponse = await fetch(
-      'https://api.github.com/repos/luizaugustom/montshop-desktop/releases/latest',
+      'https://api.github.com/repos/luizaugustom/lojas-desktop/releases/latest',
       {
         headers: {
           'Accept': 'application/vnd.github.v3+json',
@@ -27,7 +27,7 @@ export async function GET() {
 
     // Procurar o arquivo .exe nos assets
     const setupFile = release.assets?.find((asset: any) => 
-      asset.name.includes('MontShop-Desktop-Setup') && asset.name.endsWith('.exe')
+      asset.name.toLowerCase().includes('montshop-desktop-setup') && asset.name.endsWith('.exe')
     )
 
     if (!setupFile) {
