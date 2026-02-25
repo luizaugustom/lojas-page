@@ -8,8 +8,6 @@ export default function Pricing() {
     'Controle de estoque em tempo real',
     'Gestão de vendedores e comissões',
     'Relatórios detalhados',
-    'Mensagens automáticas WhatsApp',
-    'Catálogo digital personalizado',
     'Backup automático diário',
     'Suporte dedicado',
   ]

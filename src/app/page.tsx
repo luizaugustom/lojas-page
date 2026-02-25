@@ -4,6 +4,10 @@ import Navbar from '@/components/Navbar'
 import WhatsAppFloat from '@/components/WhatsAppFloat'
 
 // Lazy load componentes abaixo da dobra para reduzir First Load JS
+const Multilojas = dynamic(() => import('@/components/Multilojas'), {
+  loading: () => <div className="h-96" />,
+})
+
 const Screenshots = dynamic(() => import('@/components/Screenshots'), {
   loading: () => <div className="h-96" />, // Placeholder para evitar layout shift
 })
@@ -37,6 +41,7 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-white via-primary-50/30 to-white">
       <Navbar />
       <Hero />
+      <Multilojas />
       <Screenshots />
       <Benefits />
       <Features />

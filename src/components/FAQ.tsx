@@ -29,23 +29,19 @@ export default function FAQ() {
     },
     {
       question: 'Como funciona o suporte?',
-      answer: 'Oferecemos suporte via WhatsApp para todos os planos. O plano Basic tem suporte padrão via WhatsApp. Os planos Plus e Pro têm suporte prioritário via WhatsApp. Todas as respostas são rápidas e detalhadas. Também disponibilizamos documentação completa sobre todas as funcionalidades do sistema.',
+      answer: 'Todos os usuários têm atendimento via WhatsApp e e-mail 24 horas. Nossa equipe está disponível a qualquer momento para tirar dúvidas, resolver problemas e ajudar você a aproveitar ao máximo o sistema.',
     },
     {
       question: 'O que são os limites de produtos e vendedores?',
-      answer: 'Cada plano tem limites específicos: Basic permite até 250 produtos e 1 vendedor. Plus permite até 800 produtos e 2 vendedores. O plano Pro tem produtos e vendedores ilimitados. A quantidade de clientes cadastrados é ilimitada em todos os planos.',
+      answer: 'Dependendo do seu contrato mensal, o limite de produtos e vendedores pode ser limitado. Esses limites podem ser ajustados a qualquer momento, conforme a necessidade do seu negócio.',
     },
     {
       question: 'Como funciona o sistema de mensagens automáticas de cobrança?',
-      answer: 'O sistema detecta automaticamente quando uma venda a prazo vence e envia uma mensagem personalizada via WhatsApp para o cliente. Disponível nos planos Plus e Pro, aumenta significativamente o índice de recebimento.',
+      answer: 'O sistema detecta automaticamente quando uma venda a prazo vence e envia uma mensagem personalizada via WhatsApp para o cliente.  Aumenta significativamente o índice de recebimento.',
     },
     {
       question: 'O que é o catálogo digital público?',
-      answer: 'É uma página web personalizada exclusiva para sua loja com link único. Seus clientes podem navegar todos os produtos, ver preços, estoques disponíveis, buscar e filtrar. Inclui botão de WhatsApp para facilitar pedidos. Disponível apenas no plano Pro, transforma sua loja em uma vitrine online profissional.',
-    },
-    {
-      question: 'Quais funcionalidades são exclusivas de cada plano?',
-      answer: 'O plano Plus e Pro incluem mensagens automáticas de cobrança via WhatsApp para vendas a prazo. Apenas o plano Pro inclui catálogo público personalizado na web, com link único para seus clientes navegarem produtos e fazer pedidos. Todas as outras funcionalidades (PDV, estoque, NFC-e, relatórios, acesso web/desktop/mobile) estão disponíveis em todos os planos.',
+      answer: 'É uma página web personalizada exclusiva para sua loja com link único. Seus clientes podem navegar todos os produtos, ver preços, estoques disponíveis, buscar e filtrar. Inclui botão de WhatsApp para facilitar pedidos. Transformando sua loja em uma vitrine online profissional.',
     },
     {
       question: 'Posso cancelar quando quiser?',

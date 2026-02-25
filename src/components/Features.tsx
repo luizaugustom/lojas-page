@@ -21,10 +21,16 @@ import {
   Wallet,
   ArrowUpDown,
   ClipboardList,
+  Layers,
 } from 'lucide-react'
 
 export default function Features() {
   const features = [
+    {
+      icon: Layers,
+      title: '🏪 Multilojas – Várias lojas em um só lugar',
+      description: 'Gerencie dados e produtos de várias lojas em um único painel. Troque entre lojas em um clique, cadastre produtos e estoque por loja, relatórios por unidade ou consolidados. Ideal para redes e quem tem mais de uma loja.',
+    },
     {
       icon: Globe,
       title: '🌐 Catálogo Digital Público',
@@ -136,8 +142,9 @@ export default function Features() {
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {features.map((feature, index) => {
-            // Detectar se é catálogo digital, mensagens automáticas ou personalizável
-            const isHighlight = feature.title.includes('Catálogo Digital') || 
+            // Detectar se é multilojas, catálogo digital, mensagens automáticas ou personalizável
+            const isHighlight = feature.title.includes('Multilojas') ||
+                               feature.title.includes('Catálogo Digital') || 
                                feature.title.includes('Mensagens Automáticas') ||
                                feature.title.includes('Personalizável');
             
@@ -153,7 +160,7 @@ export default function Features() {
             >
               <div className="flex items-start gap-3 sm:gap-4">
                 <div className={`flex-shrink-0 p-2 sm:p-3 rounded-xl group-hover:scale-110 transition-transform ${
-                  (isHighlight || feature.title.includes('Personalizável')) 
+                  (isHighlight || feature.title.includes('Personalizável') || feature.title.includes('Multilojas')) 
                     ? 'bg-white/20' 
                     : 'bg-gradient-to-br from-primary-500 to-accent-600'
                 }`}>
@@ -161,10 +168,10 @@ export default function Features() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className={`text-base sm:text-lg font-bold mb-1 sm:mb-2 ${
-                    (isHighlight || feature.title.includes('Personalizável')) ? 'text-white' : 'text-gray-900'
+                    (isHighlight || feature.title.includes('Personalizável') || feature.title.includes('Multilojas')) ? 'text-white' : 'text-gray-900'
                   }`}>{feature.title}</h3>
                   <p className={`text-xs sm:text-sm ${
-                    (isHighlight || feature.title.includes('Personalizável')) ? 'text-white/90' : 'text-gray-600'
+                    (isHighlight || feature.title.includes('Personalizável') || feature.title.includes('Multilojas')) ? 'text-white/90' : 'text-gray-600'
                   }`}>{feature.description}</p>
                 </div>
               </div>

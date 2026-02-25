@@ -16,7 +16,7 @@ export default function Hero() {
 
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0">
               Desenvolvido em parceria com donos de lojas, o Sistema Montshop é o sistema mais completo do mercado.
-              PDV completo, NFC-e automática, controle de estoque, comissões, parcelamento e muito mais.
+              Gerencie dados e produtos de várias lojas em um só lugar, PDV completo, NFC-e automática, controle de estoque, comissões, parcelamento e muito mais.
             </p>
             
             {/* Partnership Badge */}
@@ -30,6 +30,7 @@ export default function Hero() {
             {/* Key Benefits */}
             <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
               {[
+                'Multilojas: gerencie várias lojas em um só painel',
                 'PDV com busca por código de barras',
                 'Emissão NFC-e automática',
                 'Controle de estoque e comissões',
