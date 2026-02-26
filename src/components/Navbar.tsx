@@ -8,6 +8,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isVideosModalOpen, setIsVideosModalOpen] = useState(false)
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
   const [isLoadingDownload, setIsLoadingDownload] = useState(false)
 
@@ -23,10 +24,11 @@ export default function Navbar() {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setIsModalOpen(false)
+        setIsVideosModalOpen(false)
       }
     }
     
-    if (isModalOpen) {
+    if (isModalOpen || isVideosModalOpen) {
       document.body.style.overflow = 'hidden'
       window.addEventListener('keydown', handleEscape)
     } else {
@@ -37,7 +39,7 @@ export default function Navbar() {
       document.body.style.overflow = 'unset'
       window.removeEventListener('keydown', handleEscape)
     }
-  }, [isModalOpen])
+  }, [isModalOpen, isVideosModalOpen])
 
   // Buscar link de download mais recente do GitHub
   useEffect(() => {
@@ -66,8 +68,20 @@ export default function Navbar() {
     { label: 'FAQ', href: '#faq' },
   ]
 
-  // Link para a playlist do curso MontShop no YouTube
-  const courseLink = 'https://www.youtube.com/playlist?list=PLVRgzWLdnp7K9QqWLw_DXgiHU7bhyEInL'
+  const videoOptions = [
+    {
+      label: 'Ver utilização como gestor',
+      href: 'https://www.youtube.com/watch?v=u_Sg5bHk8Ew&list=PLVRgzWLdnp7K6_6cjoVTExA-wX_JELqkG',
+    },
+    {
+      label: 'Ver utilização como Vendedor',
+      href: 'https://www.youtube.com/watch?v=neonCYcK2u4&list=PLVRgzWLdnp7KT7Y564KSY7VhKa0o8rLQ_',
+    },
+    {
+      label: 'Ver Instalação Completa',
+      href: 'https://www.youtube.com/watch?v=N_-SREI1848&list=PLVRgzWLdnp7J25IAPRPQItvdWF6SqkVxP',
+    },
+  ]
 
   return (
     <nav
@@ -109,15 +123,13 @@ export default function Navbar() {
             >
               Acesse o Sistema
             </button>
-            <a
-              href={courseLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => setIsVideosModalOpen(true)}
               className="flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors border-2 border-primary-600 px-4 py-2 rounded-full hover:bg-primary-50"
             >
               <PlayCircle size={18} />
               <span>Veja o sistema</span>
-            </a>
+            </button>
             <a
               href={`https://wa.me/5548998482590?text=${encodeURIComponent('Olá! Tenho interesse no Sistema Montshop e gostaria de começar o teste gratuito de 7 dias.')}`}
               target="_blank"
@@ -159,16 +171,16 @@ export default function Navbar() {
             >
               Acesse o Sistema
             </button>
-            <a
-              href={courseLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="flex items-center gap-2 px-4 py-3 mx-4 mt-2 text-primary-600 hover:bg-primary-50 rounded-lg font-medium transition-colors border border-primary-200"
+            <button
+              onClick={() => {
+                setIsVideosModalOpen(true)
+                setIsMobileMenuOpen(false)
+              }}
+              className="flex items-center gap-2 px-4 py-3 mx-4 mt-2 text-primary-600 hover:bg-primary-50 rounded-lg font-medium transition-colors border border-primary-200 w-full text-left"
             >
               <PlayCircle size={18} />
               <span>Veja o Sistema</span>
-            </a>
+            </button>
             <a
               href={`https://wa.me/5548998482590?text=${encodeURIComponent('Olá! Tenho interesse no Sistema Montshop e gostaria de começar o teste gratuito de 7 dias.')}`}
               target="_blank"
@@ -203,7 +215,7 @@ export default function Navbar() {
               
               <div className="space-y-4">
                 <a
-                  href="https://montshop.vercel.app"
+                  href="https://montshop.app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 border-2 border-primary-600 rounded-xl hover:bg-primary-50 transition-all group"
@@ -248,6 +260,48 @@ export default function Navbar() {
                     </p>
                   </div>
                 </a>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Modal de Vídeos - Veja o Sistema */}
+        {isVideosModalOpen && (
+          <div 
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm min-h-screen overflow-y-auto"
+            onClick={() => setIsVideosModalOpen(false)}
+          >
+            <div 
+              className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 sm:p-8 animate-fade-in my-auto max-h-[calc(100vh-2rem)] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl font-bold text-gray-900">Veja o Sistema</h2>
+                <button
+                  onClick={() => setIsVideosModalOpen(false)}
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                >
+                  <CloseIcon size={24} />
+                </button>
+              </div>
+              
+              <div className="space-y-4">
+                {videoOptions.map((option) => (
+                  <a
+                    key={option.href}
+                    href={option.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 border-2 border-primary-600 rounded-xl hover:bg-primary-50 transition-all group"
+                  >
+                    <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center group-hover:bg-primary-200 transition-colors">
+                      <PlayCircle className="text-primary-600" size={24} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-gray-900">{option.label}</h3>
+                    </div>
+                  </a>
+                ))}
               </div>
             </div>
           </div>
