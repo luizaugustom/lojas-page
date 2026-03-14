@@ -35,7 +35,7 @@ export default function Multilojas() {
     <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Banner principal em destaque */}
-        <div className="relative rounded-3xl md:rounded-[2rem] overflow-hidden bg-gradient-to-br from-primary-600 via-primary-700 to-accent-700 p-8 md:p-12 lg:p-16 shadow-2xl animate-fade-in">
+        <div className="relative rounded-3xl md:rounded-[2rem] overflow-hidden bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 p-8 md:p-12 lg:p-16 shadow-card animate-fade-in">
           {/* Decoração de fundo */}
           <div className="absolute inset-0 opacity-20">
             <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -97,14 +97,14 @@ export default function Multilojas() {
           {items.map((item, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl p-5 sm:p-6 shadow-lg hover:shadow-xl border border-gray-100 hover:border-primary-200 transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+              className="group bg-white rounded-2xl p-5 sm:p-6 shadow-soft hover:shadow-card-hover border border-surface-100 hover:border-primary-200 transition-all duration-300 hover:-translate-y-1 animate-fade-in"
               style={{ animationDelay: `${index * 60}ms` }}
             >
-              <div className="bg-gradient-to-br from-primary-500 to-accent-600 p-3 rounded-xl w-fit mb-3 group-hover:scale-110 transition-transform">
+              <div className="bg-primary-500 p-3 rounded-xl w-fit mb-3 group-hover:scale-110 transition-transform">
                 <item.icon className="w-6 h-6 text-white" />
               </div>
-              <h3 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">{item.title}</h3>
-              <p className="text-xs sm:text-sm text-gray-600">{item.description}</p>
+              <h3 className="font-display font-bold text-surface-900 mb-1 text-sm sm:text-base">{item.title}</h3>
+              <p className="text-xs sm:text-sm text-surface-600">{item.description}</p>
             </div>
           ))}
         </div>

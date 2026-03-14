@@ -38,7 +38,7 @@ const Footer = dynamic(() => import('@/components/Footer'), {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white via-primary-50/30 to-white">
+    <main className="min-h-screen bg-mesh">
       <Navbar />
       <Hero />
       <Multilojas />

@@ -12,16 +12,15 @@ import {
   Settings,
   TrendingUp,
   Printer,
-  Database,
   Percent,
   Receipt,
   Calendar,
   MessageCircle,
   Globe,
   Wallet,
-  ArrowUpDown,
   ClipboardList,
   Layers,
+  Banknote,
 } from 'lucide-react'
 
 export default function Features() {
@@ -92,9 +91,14 @@ export default function Features() {
       description: 'Vendas parceladas com controle de prestações e datas de vencimento. Gestão completa de parcelas.',
     },
     {
+      icon: Banknote,
+      title: 'Boletos Bancários',
+      description: 'Emissão e gestão de boletos bancários integrada (ex.: Boleto Cloud), conciliação via CNAB, controle de vencimentos e status de pagamento.',
+    },
+    {
       icon: Calendar,
       title: 'Contas a Pagar',
-      description: 'Controle de contas com alertas de vencimento, boletos, status de pagamento e gestão de fornecedores.',
+      description: 'Controle de contas com alertas de vencimento, status de pagamento e gestão de fornecedores.',
     },
     {
       icon: Wallet,
@@ -119,60 +123,57 @@ export default function Features() {
   ]
 
   return (
-    <section id="recursos" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-primary-50/30">
+    <section id="recursos" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface-50/50 to-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-block bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
             RECURSOS COMPLETOS
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-surface-900 mb-4">
             Tudo que você precisa para{' '}
             <span className="gradient-text">gerenciar sua loja</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6">
+          <p className="text-lg md:text-xl text-surface-600 max-w-3xl mx-auto mb-6">
             Uma plataforma completa com todas as ferramentas necessárias para o sucesso do seu negócio
           </p>
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-50 to-accent-50 border border-primary-200 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold">
+          <div className="inline-flex items-center gap-2 bg-primary-50 border border-primary-200 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
-            <span>Mais de 18 funcionalidades criadas com donos de lojas para donos de lojas</span>
+            <span>Mais de 18 funcionalidades, incluindo boletos e gestão financeira completa</span>
           </div>
         </div>
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {features.map((feature, index) => {
-            // Detectar se é multilojas, catálogo digital, mensagens automáticas ou personalizável
             const isHighlight = feature.title.includes('Multilojas') ||
-                               feature.title.includes('Catálogo Digital') || 
+                               feature.title.includes('Catálogo Digital') ||
                                feature.title.includes('Mensagens Automáticas') ||
-                               feature.title.includes('Personalizável');
-            
+                               feature.title.includes('Personalizável') ||
+                               feature.title.includes('Boletos');
             return (
             <div
               key={index}
-              className={`group p-4 sm:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in ${
-                isHighlight 
-                  ? 'bg-gradient-to-br from-primary-500 to-accent-600 text-white border-2 border-primary-400' 
-                  : 'bg-white'
+              className={`group p-4 sm:p-6 rounded-2xl shadow-soft hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1 animate-fade-in border ${
+                isHighlight
+                  ? 'bg-gradient-to-br from-primary-600 to-primary-700 text-white border-primary-500'
+                  : 'bg-white border-surface-100'
               }`}
               style={{ animationDelay: `${index * 50}ms` }}
             >
               <div className="flex items-start gap-3 sm:gap-4">
                 <div className={`flex-shrink-0 p-2 sm:p-3 rounded-xl group-hover:scale-110 transition-transform ${
-                  (isHighlight || feature.title.includes('Personalizável') || feature.title.includes('Multilojas')) 
-                    ? 'bg-white/20' 
-                    : 'bg-gradient-to-br from-primary-500 to-accent-600'
+                  isHighlight ? 'bg-white/20' : 'bg-primary-500'
                 }`}>
                   <feature.icon className="text-white w-5 h-5 sm:w-6 sm:h-6" size={24} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className={`text-base sm:text-lg font-bold mb-1 sm:mb-2 ${
-                    (isHighlight || feature.title.includes('Personalizável') || feature.title.includes('Multilojas')) ? 'text-white' : 'text-gray-900'
-                  }`}>{feature.title}</h3>
-                  <p className={`text-xs sm:text-sm ${
-                    (isHighlight || feature.title.includes('Personalizável') || feature.title.includes('Multilojas')) ? 'text-white/90' : 'text-gray-600'
-                  }`}>{feature.description}</p>
+                  <h3 className={`text-base sm:text-lg font-bold mb-1 sm:mb-2 ${isHighlight ? 'text-white' : 'text-surface-900'}`}>
+                    {feature.title}
+                  </h3>
+                  <p className={`text-xs sm:text-sm ${isHighlight ? 'text-white/90' : 'text-surface-600'}`}>
+                    {feature.description}
+                  </p>
                 </div>
               </div>
             </div>
@@ -180,11 +181,10 @@ export default function Features() {
           })}
         </div>
 
-        {/* Extra CTA */}
         <div className="mt-16 text-center">
           <a
             href="#planos"
-            className="inline-flex items-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-700 transform hover:scale-105 transition-all shadow-xl"
+            className="inline-flex items-center gap-2 bg-primary-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-700 shadow-soft hover:shadow-glow transition-all"
           >
             Ver Planos e Preços
           </a>

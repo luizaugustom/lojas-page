@@ -30,25 +30,11 @@ export default function WhatsAppFloat() {
         <span className="absolute animate-ping inline-flex h-full w-full rounded-full bg-green-400 opacity-20"></span>
 
         {/* Tooltip */}
-        <div className="hidden sm:block absolute right-full mr-4 px-4 py-2 bg-gray-900 text-white text-sm rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-xl">
+        <div className="hidden sm:block absolute right-full mr-4 px-4 py-2 bg-surface-900 text-white text-sm rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-xl">
           Fale conosco no WhatsApp
-          <div className="absolute left-full top-1/2 transform -translate-y-1/2 border-l-8 border-l-gray-900 border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
+          <div className="absolute left-full top-1/2 transform -translate-y-1/2 border-l-8 border-l-surface-900 border-t-4 border-t-transparent border-b-4 border-b-transparent"></div>
         </div>
       </a>
-
-      <style jsx>{`
-        @keyframes bounce-slow {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
-        }
-        .animate-bounce-slow {
-          animation: bounce-slow 3s ease-in-out infinite;
-        }
-      `}</style>
     </div>
   )
 }

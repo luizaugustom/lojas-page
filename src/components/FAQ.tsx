@@ -37,7 +37,7 @@ export default function FAQ() {
     },
     {
       question: 'Como funciona o sistema de mensagens automáticas de cobrança?',
-      answer: 'O sistema detecta automaticamente quando uma venda a prazo vence e envia uma mensagem personalizada via WhatsApp para o cliente.  Aumenta significativamente o índice de recebimento.',
+      answer: 'O sistema detecta automaticamente quando uma venda a prazo vence e envia uma mensagem personalizada via WhatsApp para o cliente. Aumenta significativamente o índice de recebimento.',
     },
     {
       question: 'O que é o catálogo digital público?',
@@ -50,17 +50,17 @@ export default function FAQ() {
   ]
 
   return (
-    <section id="faq" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="faq" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-surface-50/50">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
             <HelpCircle size={16} />
             PERGUNTAS FREQUENTES
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-surface-900 mb-4">
             Tire suas <span className="gradient-text">dúvidas</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600">
+          <p className="text-lg md:text-xl text-surface-600">
             Tudo que você precisa saber sobre o Sistema Montshop
           </p>
         </div>
@@ -69,14 +69,14 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border-2 border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary-300 animate-fade-in"
+              className="border-2 border-surface-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary-300 bg-white shadow-soft animate-fade-in"
               style={{ animationDelay: `${index * 50}ms` }}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-4 sm:p-6 text-left bg-white hover:bg-gray-50 transition-colors"
+                className="w-full flex items-center justify-between p-4 sm:p-6 text-left hover:bg-surface-50/50 transition-colors"
               >
-                <span className="text-base sm:text-lg font-bold text-gray-900 pr-4">{faq.question}</span>
+                <span className="text-base sm:text-lg font-bold text-surface-900 pr-4">{faq.question}</span>
                 <ChevronDown
                   className={`flex-shrink-0 text-primary-600 transition-transform duration-300 w-5 h-5 sm:w-6 sm:h-6 ${
                     openIndex === index ? 'rotate-180' : ''
@@ -84,13 +84,13 @@ export default function FAQ() {
                   size={24}
                 />
               </button>
-              
+
               <div
                 className={`overflow-hidden transition-all duration-300 ${
                   openIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
               >
-                <div className="px-4 sm:px-6 pb-4 sm:pb-6 text-sm sm:text-base text-gray-700 leading-relaxed">
+                <div className="px-4 sm:px-6 pb-4 sm:pb-6 text-sm sm:text-base text-surface-700 leading-relaxed">
                   {faq.answer}
                 </div>
               </div>
@@ -98,26 +98,23 @@ export default function FAQ() {
           ))}
         </div>
 
-        <div className="mt-12 text-center p-8 bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">
+        <div className="mt-12 text-center p-8 bg-primary-50 rounded-2xl border border-primary-100">
+          <h3 className="font-display text-xl font-bold text-surface-900 mb-2">
             Ainda tem dúvidas?
           </h3>
-          <p className="text-gray-600 mb-4">
+          <p className="text-surface-600 mb-4">
             Nossa equipe está pronta para ajudar você
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://wa.me/5548998482590"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-700 transition-colors"
-            >
-              Falar com Especialista via WhatsApp
-            </a>
-          </div>
+          <a
+            href="https://wa.me/5548998482590"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 shadow-soft transition-all"
+          >
+            Falar com Especialista via WhatsApp
+          </a>
         </div>
       </div>
     </section>
   )
 }
-

@@ -21,16 +21,16 @@ import {
 
 export default function Screenshots() {
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary-50/30 to-white">
+    <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-surface-50/50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-block bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
             INTERFACE MODERNA
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-surface-900 mb-4">
             Conheça o <span className="gradient-text">Sistema por Dentro</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-surface-600 max-w-3xl mx-auto">
             Interface intuitiva e moderna, desenvolvida pensando na experiência do usuário
           </p>
         </div>
@@ -38,14 +38,14 @@ export default function Screenshots() {
         {/* Cards em Scroll Horizontal */}
         <div className="mb-16 relative">
           {/* Máscara de fade nas bordas */}
-          <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-24 lg:w-32 bg-gradient-to-r from-primary-50/30 via-primary-50/30 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-24 lg:w-32 bg-gradient-to-l from-primary-50/30 via-primary-50/30 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-24 lg:w-32 bg-gradient-to-r from-surface-50/80 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-24 lg:w-32 bg-gradient-to-l from-surface-50/80 to-transparent z-10 pointer-events-none"></div>
           
           <div className="overflow-x-auto overflow-y-hidden scrollbar-hide -mx-4 sm:-mx-6 md:mx-0 px-4 sm:px-6 md:px-0">
             <div className="flex gap-3 sm:gap-4 md:gap-6 animate-scroll-infinite" style={{ width: 'fit-content' }}>
             {/* Dashboard Principal */}
             <div className="flex-shrink-0 w-[280px] min-[375px]:w-[300px] sm:w-[340px] md:w-[380px] animate-fade-in">
-              <div className="bg-white rounded-2xl shadow-xl p-3 sm:p-4 md:p-5 border border-gray-100 h-full">
+              <div className="bg-white rounded-2xl shadow-card p-3 sm:p-4 md:p-5 border border-surface-100 h-full">
             <div className="flex items-center justify-between mb-3 sm:mb-4 pb-2 sm:pb-3 border-b border-gray-200">
               <div className="flex items-center gap-1.5 sm:gap-2">
                 <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-400"></div>
@@ -140,7 +140,7 @@ export default function Screenshots() {
 
           {/* Catálogo Público - Loja Online */}
           <div className="flex-shrink-0 w-[280px] min-[375px]:w-[300px] sm:w-[340px] md:w-[380px] animate-fade-in animation-delay-100">
-            <div className="bg-white rounded-2xl shadow-xl p-3 sm:p-4 md:p-5 border border-gray-100 h-full">
+            <div className="bg-white rounded-2xl shadow-card p-3 sm:p-4 md:p-5 border border-surface-100 h-full">
             <div className="flex items-center justify-between mb-3 sm:mb-4 pb-2 sm:pb-3 border-b border-gray-200">
               <div className="flex items-center gap-1.5 sm:gap-2">
                 <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-400"></div>
@@ -152,7 +152,7 @@ export default function Screenshots() {
 
             <div className="space-y-2 sm:space-y-3">
               {/* Header do Catálogo */}
-              <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg p-2 sm:p-3 text-white">
+              <div className="bg-gradient-to-r from-primary-600 to-primary-500 rounded-lg p-2 sm:p-3 text-white">
                 <div className="flex items-center justify-between mb-1.5 sm:mb-2">
                   <div>
                     <h3 className="text-xs sm:text-sm font-bold mb-0.5">Loja Exemplo</h3>
@@ -314,7 +314,7 @@ export default function Screenshots() {
 
           {/* PDV Screen */}
           <div className="flex-shrink-0 w-[280px] min-[375px]:w-[300px] sm:w-[340px] md:w-[380px] animate-fade-in animation-delay-200">
-            <div className="bg-white rounded-2xl shadow-xl p-3 sm:p-4 md:p-5 border border-gray-100 h-full">
+            <div className="bg-white rounded-2xl shadow-card p-3 sm:p-4 md:p-5 border border-surface-100 h-full">
               <div className="flex items-center justify-between mb-3 sm:mb-4 pb-2 sm:pb-3 border-b border-gray-200">
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-400"></div>
@@ -370,7 +370,7 @@ export default function Screenshots() {
 
           {/* Estoque Screen */}
           <div className="flex-shrink-0 w-[280px] min-[375px]:w-[300px] sm:w-[340px] md:w-[380px] animate-fade-in animation-delay-400">
-            <div className="bg-white rounded-2xl shadow-xl p-3 sm:p-4 md:p-5 border border-gray-100 h-full">
+            <div className="bg-white rounded-2xl shadow-card p-3 sm:p-4 md:p-5 border border-surface-100 h-full">
               <div className="flex items-center justify-between mb-3 sm:mb-4 pb-2 sm:pb-3 border-b border-gray-200">
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-400"></div>
@@ -423,7 +423,7 @@ export default function Screenshots() {
           {/* Duplicação dos cards para loop infinito */}
           {/* Dashboard Principal */}
           <div className="flex-shrink-0 w-[280px] min-[375px]:w-[300px] sm:w-[340px] md:w-[380px]">
-            <div className="bg-white rounded-2xl shadow-xl p-3 sm:p-4 md:p-5 border border-gray-100 h-full">
+            <div className="bg-white rounded-2xl shadow-card p-3 sm:p-4 md:p-5 border border-surface-100 h-full">
               <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-200">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-red-400"></div>
@@ -515,7 +515,7 @@ export default function Screenshots() {
 
           {/* Catálogo Público - Loja Online */}
           <div className="flex-shrink-0 w-[280px] min-[375px]:w-[300px] sm:w-[340px] md:w-[380px]">
-            <div className="bg-white rounded-2xl shadow-xl p-3 sm:p-4 md:p-5 border border-gray-100 h-full">
+            <div className="bg-white rounded-2xl shadow-card p-3 sm:p-4 md:p-5 border border-surface-100 h-full">
               <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-200">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-red-400"></div>
@@ -659,7 +659,7 @@ export default function Screenshots() {
 
           {/* PDV Screen */}
           <div className="flex-shrink-0 w-[280px] min-[375px]:w-[300px] sm:w-[340px] md:w-[380px]">
-            <div className="bg-white rounded-2xl shadow-xl p-3 sm:p-4 md:p-5 border border-gray-100 h-full">
+            <div className="bg-white rounded-2xl shadow-card p-3 sm:p-4 md:p-5 border border-surface-100 h-full">
               <div className="flex items-center justify-between mb-3 sm:mb-4 pb-2 sm:pb-3 border-b border-gray-200">
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-400"></div>
@@ -715,7 +715,7 @@ export default function Screenshots() {
 
           {/* Estoque Screen */}
           <div className="flex-shrink-0 w-[280px] min-[375px]:w-[300px] sm:w-[340px] md:w-[380px]">
-            <div className="bg-white rounded-2xl shadow-xl p-3 sm:p-4 md:p-5 border border-gray-100 h-full">
+            <div className="bg-white rounded-2xl shadow-card p-3 sm:p-4 md:p-5 border border-surface-100 h-full">
               <div className="flex items-center justify-between mb-3 sm:mb-4 pb-2 sm:pb-3 border-b border-gray-200">
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-400"></div>
@@ -769,7 +769,7 @@ export default function Screenshots() {
         </div>
 
         {/* Mobile App Preview */}
-        <div className="bg-gradient-to-br from-primary-600 to-purple-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 text-white animate-fade-in animation-delay-600">
+        <div className="bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 text-white animate-fade-in animation-delay-600">
           <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-4 sm:mb-6">
